@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+:root {
+    --dark01: #000000;
+    --dark02: #333333;
+    --dark03: #666666;
+    --light03: #999999;
+    --light02: #cccccc;
+    --light01: #ffffff;
+
+    --text: var(--light01);
+    --primary: var(--green);
+
+    --tan: #ECEBE4;
+    --lightBlue: #00BCD4;
+    --darkBlue: #0097A7;
+    --green: #06D6A0;
+    --red: #d60606;
+    --purple: #a47ac3;
+
+    --baseFont: 1em;
+    --h1: calc(var(--baseFont)* 6);
+    --h2: calc(var(--baseFont)* 3);
+    --h3: calc(var(--baseFont)* 1.5);
+    --h4: calc(var(--baseFont)* 1.2);
+    --smallText: calc(var(--baseFont)* 0.5);
+}
+
+/* COLOR IDs */
+#light {
+    background-color: var(--light01);
+}
+
+#dark {
+    background-color: var(--dark01);
+}
+
+#dark02 {
+    background-color: var(--dark02);
+}
+
+#tan {
+    background-color: var(--tan);
+}
+
+#lightBlue {
+    background-color: var(--lightBlue);
+}
+
+#darkBlue {
+    background-color: var(--darkBlue);
+}
+
+#green {
+    background-color: var(--green);
+}
+
+#red {
+    background-color: var(--red);
+}
+
+#purple {
+    background-color: var(--purple);
+}
+
+/*PAGE FORMATTING
+------------------------------------
+*/
+
+/*    html tags ------------------------------------ */
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    color: var(--dark02);
+    font-size: var(--h1);
+
+    margin: 0.05em 0 0.25em 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 700;
+    color: var(--dark03);
+    font-size: var(--h2);
+
+    margin: 0 0 0.25em 0;
+    ;
+    padding: 0;
+}
+
+h3 {
+    font-weight: 400i;
+    color: var(--light03);
+    font-size: var(--h3);
+
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    display: inline-block;
+    font-weight: 400;
+    color: var(--dark03);
+    font-size: var(--fontBase);
+    margin: 1em 0;
+    padding: 0;
+}
+
+p {
+    font-weight: 400;
+    color: var(--dark02);
+    font-size: var(--fontBase);
+    margin: 1em 0;
+    padding: 0;
+
+}
+
+header {
+    color: var(--light01);
+    font-size: var(--h2);
+    font-weight: 900;
+
+    padding: 0.2em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.3em;
+
+    width: 100%
+}
+
+hr {
+    border: 0.1em var(--light03) dashed;
+    border-radius: 0.5em;
+
+}
+
+/*    formatting classes ------------------------------------ */
+
+.content {
+    /* colored div */
+    margin: 2em;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.section {
+    /* outlined section */
+    border: 0.2em var(--dark03) dashed;
+    border-radius: 0.5em;
+
+    margin: 2em;
+    padding: 1em;
+
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Flex Box */
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*    forms---------------------*/
+
+
+input[type=text],
+select,
+textarea {
+
+    margin: 0.5em;
+    padding: 0.5em;
+
+    font-size: var(--baseFont);
+    font-weight: 300;
+    color: var(--green);
+    background-color: var(--light01);
+
+
+    border: none;
+    box-shadow: inset 0 -0.4em 0 -0.2em rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
+
+    transition: all ease-in-out 0.2s;
+
+}
+
+input[type=text]:hover,
+input[type=text]:focus,
+select:hover,
+select:focus,
+textarea:hover,
+textarea:focus {
+    box-shadow: inset 0 -0.7em 0 -0.35em var(--green);
+    outline: 0 !important;
+    /*    transform: translateY(0.04em);*/
+}
+
+
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    border-radius: 50%;
+    width: 1.75em;
+    height: 1.75em;
+
+    border: 0.1em solid var(--dark03);
+    background-color: var(--light01);
+    transition: 0.5s all ease;
+    margin-right: 5px;
+
+    position: relative;
+    top: 4px;
+}
+
+input[type=radio]:checked {
+    border: 0.7em solid var(--green);
+    background-color: var(--tan);
+}
+
+label {
+    display: block;
+    font-size: var(--h3);
+    font-weight: 900;
+
+    color: var(--dark03);
+
+    margin: 0;
+
+}
+
+legend {
+    font-weight: 700;
+    font-size: var(--h3);
+    color: car(--light03);
+}
+
+
+fieldset {
+    border: 0.2em var(--dark03) dashed;
+    border-radius: 0.5em;
+
+    margin: 2em;
+    padding: 1em;
+
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* LANDING PAGE
+---------------------------------
+*/
+
+#intro {
+    margin: 0em;
+    float: right;
+    padding: 20em 0em 20em 0em;
+}
+
+#hero {
+    padding: 0em 0em 0 0em;
+    margin: 0;
+    
+    min-width: 10em;
+
+    font-family: 'Playfair Display', serif;
+    font-size: var(--h2);
+    font-weight: 500;
+
+    color: var(--red);
+    background-color: rgba(0, 0, 0, 0);
+
+
+    border: none;
+    border-bottom: 0.07em var(--red) solid;
+    border-radius: 0;
+    box-shadow: 0.0em 0.1em 0.01em -0.01em rgba(214,6,6,0.25);
+
+    transition: all ease-in-out 0.2s;
+}
+
+#hero:focus {
+    outline: 0 !important;
+}
+
+
+#hero input{
+    width: 100%;
+}
+
+#control {
+    
+    padding: 0.7em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    width: 75%;
+    
+    font-size: var(--h3);
+    font-weight: 300;
+    
+    border-radius: 0.2em;
+
+    background-color: rgba(200, 20, 20, 0.2);
+    color: var(--light01);
+    
+    transform: translate(00%, 95%);
+   
+}
+
+#refresh{
+    transition: 1s ease-in-out;
+}
+#refresh:hover{
+    transform: rotate(720deg) scale(1.25);
+}
+
+#new {
+    transition: 0.4s ease-out;
+}
+
+#new:hover {
+    transform: scale(1.25);
+}
+
+#check {
+    transition: 0.5s ease-out;
+    
+}
+#check:hover{
+    transform: rotate(-10deg) scale(1.25);
+    
+}
+
+
+
+/*
+BUTTON STYLTES 
+------------------------------------ 
+*/
+button,
+input[type=submit] {
+    /*formatting*/
+    display: inline-block;
+    padding: 0.5em;
+    margin: 0.2em 0;
+
+    /*font*/
+    font-weight: 900;
+    text-align: center;
+    font-size: var(--h3);
+    /*text-transform: uppercase;*/
+
+    /*colors*/
+    color: var(--light01);
+    background-color: rgba(0, 0, 0, 0.25);
+    border: none;
+    opacity: 0.75;
+
+    /*3D FX*/
+    border-radius: 0.5em;
+    box-sizing: border-box;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17),
+        inset 0 0.1em 0 0 rgba(256, 256, 256, 0.7);
+
+    transition: all ease-in-out 0.1s;
+}
+
+/* HOVER FX
+    Darkens on hover
+    Changes to pointer
+*/
+button:hover,
+input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    opacity: 1;
+
+    transition: all ease-in-out 0.1s;
+}
+
+/* BUTTON FX
+     !Use for default button function
+     depresses button 
+     changes color
+*/
+button:active {
+    background-color: rgba(50, 50, 0, 0.5);
+    transform: translateY(0.05em);
+    box-shadow: inset 0 -0.45em 0 -0.35em rgba(0, 0, 0, 0.30),
+        inset 0 0.15em 0 0 rgba(256, 256, 256, 0.7);
+    transition: all ease-in-out 0.1s;
+}
+
+/*    depresses font-awesome icon or text */
+button:active i {
+    transition: all ease-in-out 0.1s;
+    transform: translateY(0.05em);
+}
+
+
+/*     !Use if toggable button JS is included */
+/*button.active {
+    background-color: rgba(100, 50, 0, 0.5);
+    transform: translateY(0.05em);
+    box-shadow: inset 0 -0.45em 0 -0.35em rgba(0, 0, 0, 0.30),
+        inset 0 0.15em 0 0 rgba(256, 256, 256, 0.7);
+    transition: all ease-in-out 0.1s;
+}
+
+button.active i {
+    transition: all ease-in-out 0.1s;
+    transform: translateY(0.05em);
+}*/
+
+/* Removes page highlight */
+button:focus {
+    outline: 0 !important;
+}
+
+
+/* ------------------------------------ */
