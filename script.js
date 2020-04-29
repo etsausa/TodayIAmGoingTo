@@ -6,9 +6,6 @@ let quotes = [
 
 let userQuote = "";
 
-let textInput = document.getElementById("goal").innerHTML;
-
-
 
 //REFRESH BUTTON
 document.getElementById("refresh").onclick = function() {refresh()};//listener
@@ -18,19 +15,17 @@ function refresh() {
     document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 3)];
 }
 
-document.getElementById("new").onclick = function() {clear()};
+document.getElementById("new").onclick = function() {clear()}; //listener
 
 function clear() {
     //sets data of goal to nothing
     document.getElementById("goal").innerHTML  = "";
 }
 
-document.getElementById("check").onclick = function() {check()};
+document.getElementById("check").onclick = function() {check()}; //listener
 
 function check() {
-    userQuote = textInput;
+    userQuote = document.getElementById("goal").innerHTML;
     console.log(userQuote);
-    location.replace("mygoal.html")
-    doument.getElementById("goal").innerHTML = userQuote;
-
+    window.location.href = "mygoal.html";
 }
