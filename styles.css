@@ -273,7 +273,7 @@ fieldset {
     padding: 20em 0em 20em 0em;
 }
 
-#hero {
+#goal {
     padding: 0em 0em 0 0em;
     margin: 0;
     
@@ -295,12 +295,12 @@ fieldset {
     transition: all ease-in-out 0.2s;
 }
 
-#hero:focus {
+#goal:focus {
     outline: 0 !important;
 }
 
 
-#hero input{
+#goal input{
     width: 100%;
 }
 

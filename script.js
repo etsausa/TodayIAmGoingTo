@@ -6,19 +6,23 @@ let quotes = [
 
 let userQuote = "";
 
-let textInput = document.getElementById("hero").innerHTML;
+let textInput = document.getElementById("goal").innerHTML;
 
 
-document.getElementById("refresh").onclick = function() {refresh()};
+
+//REFRESH BUTTON
+document.getElementById("refresh").onclick = function() {refresh()};//listener
 
 function refresh() {
-    document.getElementById("hero").innerHTML = quotes[Math.floor(Math.random() * 3)];
+    //'randomly' pick one of the three possible goals
+    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 3)];
 }
 
 document.getElementById("new").onclick = function() {clear()};
 
 function clear() {
-    document.getElementById("hero").innerHTML  = "";
+    //sets data of goal to nothing
+    document.getElementById("goal").innerHTML  = "";
 }
 
 document.getElementById("check").onclick = function() {check()};
@@ -26,4 +30,7 @@ document.getElementById("check").onclick = function() {check()};
 function check() {
     userQuote = textInput;
     console.log(userQuote);
+    location.replace("mygoal.html")
+    doument.getElementById("goal").innerHTML = userQuote;
+
 }
