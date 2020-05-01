@@ -1,7 +1,10 @@
 let quotes = [
     "today i am going to exercise",
     "today i am going to read",
-    "today i am going to write"
+    "today i am going to write",
+    "today i am going to code",
+    "today i am going to study",
+    "today i am going to work on my resume"
 ]
 
 
@@ -11,7 +14,7 @@ document.getElementById("refresh").onclick = function() {refresh()};//listener
 
 function refresh() {
     //'randomly' pick one of the three possible goals
-    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 3)];
+    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 6)];
 }
 
 //NEW BUTTON
@@ -27,9 +30,10 @@ document.getElementById("check").onclick = function() {check()}; //listener
 
 function check() {
     let userIN = document.getElementById("goal").innerHTML;
+    
     console.log(userIN);
     
-    local.Storage.setItem("userInput", userIn);
+    localStorage.setItem("userInput", userIN);
     
     window.location.href = "mygoal.html";
     

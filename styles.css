@@ -274,8 +274,9 @@ fieldset {
 
 #intro {
     margin: 0em;
-    float: right;
+    float: left;
     padding: 20em 0em 20em 0em;
+    width: 100%;
 }
 
 #goal {
@@ -316,7 +317,7 @@ fieldset {
     flex-direction: row;
     justify-content: space-between;
     
-    width: 75%;
+    width: 15%;
     
     font-size: var(--h3);
     font-weight: 300;
@@ -327,7 +328,6 @@ fieldset {
     color: var(--light01);
     
     transform: translate(00%, 95%);
-   
 }
 
 #refresh{
