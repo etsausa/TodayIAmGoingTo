@@ -331,10 +331,12 @@ fieldset {
 }
 
 #refresh{
-    transition: 1s ease-in-out;
+    transition: .4s ease-in-out;
 }
 #refresh:hover{
     transform: rotate(720deg) scale(1.25);
+    color: var(--darkBlue);
+    cursor: pointer;
 }
 
 #new {
@@ -343,13 +345,17 @@ fieldset {
 
 #new:hover {
     transform: scale(1.25);
+    color: var(--purple);
+    cursor: pointer;
 }
 
 #check {
     transition: 0.5s ease-out;   
 }
 #check:hover{
-    transform: rotate(-10deg) scale(1.25);   
+    transform: rotate(-10deg) scale(1.25);
+    color: var(--green);
+    cursor: pointer;
 }
 
 
