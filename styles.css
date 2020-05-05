@@ -286,7 +286,7 @@ fieldset {
     min-width: 10em;
 
     font-family: 'Playfair Display', serif;
-    font-size: var(--h2);
+    font-size: 4vw;
     font-weight: 500;
 
     color: var(--red);

@@ -11,20 +11,26 @@
 <body>
 
 
-    <div class=content id="tan" style="height:100%; text-align:center; font-size: 200%;">
+    <div class=content id="tan" style="height:100%; text-align:center; font-size: 2vw;">
+        
+        
 
-        <span id="goal">today i am going read</span>
+        <span id="goal" ></span><br>
+        <script>
+            document.getElementById("goal").innerHTML = localStorage.getItem("userInput");
+        </script>
+        
+        <span>jot down some things about this goal</span>
         <br>
+        <input type="text" id="input01" name="textform" placeholder="+">
         <br>
-        <input type="text" id="textfomr" name="textform" placeholder="+">
+        <input type="text" id="input02" name="textform" placeholder="+">
         <br>
-        <input type="text" id="textfomr" name="textform" placeholder="+">
+        <input type="text" id="input03" name="textform" placeholder="+">
         <br>
-        <input type="text" id="textfomr" name="textform" placeholder="+">
+        <input type="text" id="input04" name="textform" placeholder="+">
         <br>
-        <input type="text" id="textfomr" name="textform" placeholder="+">
-        <br>
-        <input type="text" id="textfomr" name="textform" placeholder="+">
+        <input type="text" id="inout05" name="textform" placeholder="+">
 
 
     </div>

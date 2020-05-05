@@ -10,7 +10,9 @@ let quotes = [
 
 
 //REFRESH BUTTON
-document.getElementById("refresh").onclick = function() {refresh()};//listener
+document.getElementById("refresh").onclick = function () {
+    refresh()
+}; //listener
 
 function refresh() {
     //'randomly' pick one of the three possible goals
@@ -18,25 +20,29 @@ function refresh() {
 }
 
 //NEW BUTTON
-document.getElementById("new").onclick = function() {clear()}; //listener
+document.getElementById("new").onclick = function () {
+    clear()
+}; //listener
 
 function clear() {
     //sets data of goal to nothing
-    document.getElementById("goal").innerHTML  = "";
+    document.getElementById("goal").innerHTML = "";
 }
 
 //CHECK BUTTON
-document.getElementById("check").onclick = function() {check()}; //listener
+document.getElementById("check").onclick = function () {
+    check()
+}; //listener
 
 function check() {
-    let userIN = document.getElementById("goal").innerHTML;
-    
-    console.log(userIN);
-    
-    localStorage.setItem("userInput", userIN);
-    
-    window.location.href = "mygoal.html";
-    
-    document.getElementById("goal").innerHTML = localStorage.getItem("userInput");
+    var goal = document.getElementById("goal");
+    var userIN = document.getElementById("goal").innerHTML;
 
+    console.log(userIN);
+
+    localStorage.setItem("userInput", userIN);
+
+    window.location.href = "mygoal.html"; 
+
+   
 }
