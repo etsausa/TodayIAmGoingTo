@@ -19,6 +19,7 @@
     --green: #06D6A0;
     --red: #d60606;
     --purple: #a47ac3;
+    --lightRed: #F26D6E;
 
     --baseFont: 1em;
     --h1: calc(var(--baseFont)* 6);
@@ -168,6 +169,7 @@ hr {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .col {
@@ -364,6 +366,41 @@ fieldset {
     transform: rotate(-10deg) scale(1.25);
     color: var(--green);
     cursor: pointer;
+}
+
+.fas {
+  padding: 20px;
+  font-size: 55px;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-pencil-alt {
+  background: var(--lightBlue);
+  color: var(--light01);
+}
+
+.fa-seedling {
+  background: var(--green);
+  color: var(--light01);
+}
+
+.fa-book-reader{
+    background: var(--purple);
+    color: var(--light01);
+}
+
+.fa-pencil-ruler{
+    background: var(--lightRed);
+    color: var(--light01);
+}
+
+.fa-music{
+    background: var(--darkBlue);
+    color: var(--light01);
 }
 
 
