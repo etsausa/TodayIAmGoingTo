@@ -312,7 +312,7 @@ fieldset {
 }
 
 #control {
-
+    padding: 2vw;
     display: flex;
     flex-direction: row;
 

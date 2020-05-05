@@ -1,3 +1,4 @@
+//JQUERY code for loading different views
 $(function () {
     var includes = $('[data-include]');
 
@@ -15,20 +16,20 @@ function displayContent(page) {
     $("#pageContainer").load(file);
 
 }
+//-----------------------------------------
 
-let quotes = [
-    "today i am going to exercise",
-    "today i am going to read",
-    "today i am going to write",
-    "today i am going to code",
-    "today i am going to study",
-    "today i am going to work on my resume"
-]
-
+//ROUTES
 function check() {
     displayContent("goalexample");
 }
-
+function writing() {
+    displayContent("writing");
+}
+function draw() {
+    displayContent("draw");
+    
+}
+//-----------------------------------------
 
 
 /*
