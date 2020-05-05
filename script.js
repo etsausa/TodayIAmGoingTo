@@ -1,36 +1,48 @@
 let quotes = [
     "today i am going to exercise",
     "today i am going to read",
-    "today i am going to write"
+    "today i am going to write",
+    "today i am going to code",
+    "today i am going to study",
+    "today i am going to work on my resume"
 ]
-
-let userQuote = "";
-
-let textInput = document.getElementById("goal").innerHTML;
 
 
 
 //REFRESH BUTTON
-document.getElementById("refresh").onclick = function() {refresh()};//listener
+document.getElementById("refresh").onclick = function () {
+    refresh()
+}; //listener
 
 function refresh() {
     //'randomly' pick one of the three possible goals
-    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 3)];
+    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 6)];
 }
 
-document.getElementById("new").onclick = function() {clear()};
+//NEW BUTTON
+document.getElementById("new").onclick = function () {
+    clear()
+}; //listener
 
 function clear() {
     //sets data of goal to nothing
-    document.getElementById("goal").innerHTML  = "";
+    document.getElementById("goal").innerHTML = "";
 }
 
-document.getElementById("check").onclick = function() {check()};
+//CHECK BUTTON
+document.getElementById("check").onclick = function () {
+    check()
+}; //listener
 
 function check() {
-    userQuote = textInput;
-    console.log(userQuote);
-    location.replace("mygoal.html")
-    doument.getElementById("goal").innerHTML = userQuote;
+    var goal = document.getElementById("goal");
+    var userIN = document.getElementById("goal").innerHTML;
 
+    console.log(userIN);
+
+    localStorage.setItem("userInput", userIN);
+
+    window.location.href = "mygoal.html"; 
+
+   
 }
