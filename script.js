@@ -21,28 +21,52 @@ function displayContent(page) {
 }
 //-----------------------------------------
 
-//STORAGE
-localStorage.setItem("goal01","goal 01");
-localStorage.setItem("goal02","goal 02");
-localStorage.setItem("goal03","goal 03");
-
-//-----------------------------------------
-
 //ROUTES
+function list() {
+    displayContent("myList");
+}
+
+function addGoal(name) {
+    
+    console.log("got here");
+    
+    for (var i = 0; i <= 5; i++) {
+        var id = name + "_0" + i; 
+        var key = "goal_" + "01" + "_0" + i;
+        var value = document.getElementById(id).innerHTML;
+        
+        console.log(id + "," + value);
+
+        localStorage.setItem(key, value);
+    }
+    list();
+}
+
 function check() {
     displayContent("goalexample");
 }
+
+function create() {
+    displayContent("create");
+}
+
+function draw() {
+    displayContent("draw");
+}
+
+function garden() {
+    displayContent("garden");
+}
+
+function landing() {
+    displayContent("landing");
+}
+
+function read() {
+    displayContent("read");
+}
+
 function writing() {
     displayContent("writing");
 }
-function draw() {
-    displayContent("draw");  
-}
-
-function list(){
-    displayContent("myList");
-}
 //-----------------------------------------
-
-
-

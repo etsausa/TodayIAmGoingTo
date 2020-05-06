@@ -118,7 +118,7 @@ p {
     font-weight: 400;
     color: var(--dark02);
     font-size: var(--fontBase);
-    margin: 1em 0;
+    margin: 0.5em 0;
     padding: 0;
 
 }
@@ -147,8 +147,9 @@ hr {
 .content {
     /* colored div */
     margin: 2em;
-    padding: 1em;
+    padding: 2em;
     border-radius: 0.5em;
+    overflow: auto;
 }
 
 .section {
@@ -316,61 +317,6 @@ fieldset {
     width: 100%;
 }
 
-#control {
-    padding: 2vw;
-    display: flex;
-    flex-direction: row;
-
-    width: -webkit-fit-content;
-    height: -webkit-fit-content;
-    width: -moz-fit-content;
-    height: -moz-fit-content;
-
-    font-size: var(--h3);
-    font-weight: 300;
-    text-align: center;
-
-    border-radius: 0.2em;
-
-    background-color: rgba(200, 20, 20, 0.2);
-    color: var(--light01);
-
-    transform: translate(00%, 95%);
-}
-
-#refresh {
-    padding: 2vh 2vw;
-    transition: .4s ease-in-out;
-}
-
-#refresh:hover {
-    transform: rotate(720deg) scale(1.25);
-    color: var(--lightBlue);
-    cursor: pointer;
-}
-
-#new {
-    padding: 2vh 2vw;
-    transition: 0.4s ease-out;
-}
-
-#new:hover {
-    transform: scale(1.25);
-    color: var(--purple);
-    cursor: pointer;
-}
-
-#check {
-    padding: 2vh 2vw;
-    transition: 0.5s ease-out;
-}
-
-#check:hover {
-    transform: rotate(-10deg) scale(1.25);
-    color: var(--green);
-    cursor: pointer;
-}
-
 .icon{ 
     font-family: 'Lato', sans-serif;
     font-weight: 800;
@@ -388,42 +334,6 @@ fieldset {
     
 }
     
-.fas {
-    
-    
-}
-    
-
-
-
-/*
-.fa-pencil-alt {
-    background: var(--lightBlue);
-    color: var(--light01);
-}
-
-.fa-seedling {
-    background: var(--green);
-    color: var(--light01);
-}
-
-.fa-book-reader {
-    background: var(--purple);
-    color: var(--light01);
-}
-
-.fa-pencil-ruler {
-    background: var(--lightRed);
-    color: var(--light01);
-}
-
-.fa-music {
-    background: var(--darkBlue);
-    color: var(--light01);
-}*/
-
-
-
 /*
 BUTTON STYLTES 
 ------------------------------------ 
@@ -507,6 +417,4 @@ button.active i {
 button:focus {
     outline: 0 !important;
 }
-
-
 /* ------------------------------------ */
