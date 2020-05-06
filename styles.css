@@ -32,39 +32,39 @@
 /* COLOR IDs 
 ------------------------------------
 */
-#light {
+.light {
     background-color: var(--light01);
 }
 
-#dark {
+.dark {
     background-color: var(--dark01);
 }
 
-#dark02 {
+.dark02 {
     background-color: var(--dark02);
 }
 
-#tan {
+.tan {
     background-color: var(--tan);
 }
 
-#lightBlue {
+.lightBlue {
     background-color: var(--lightBlue);
 }
 
-#darkBlue {
+.darkBlue {
     background-color: var(--darkBlue);
 }
 
-#green {
+.green {
     background-color: var(--green);
 }
 
-#red {
+.red {
     background-color: var(--red);
 }
 
-#purple {
+.purple {
     background-color: var(--purple);
 }
 
@@ -275,8 +275,7 @@ fieldset {
 ---------------------------------
 */
 
-.iconRow{
-    font-family: 'Lato', sans-serif;
+.iconRow {
 }
 
 #intro {
@@ -372,41 +371,56 @@ fieldset {
     cursor: pointer;
 }
 
-.fas {
-  padding: 20px;
-  font-size: 58px;
-  width: 150px;
-  height: 150px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  
-}
+.icon{ 
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: var(--h2);
+    
+    text-align: center;
+    text-decoration: none;
+    
+    color: var(--light01);
 
+    width: 3.5em;
+    height: 3.5em;
+    
+    border-radius: 50%;
+    
+}
+    
+.fas {
+    
+    
+}
+    
+
+
+
+/*
 .fa-pencil-alt {
-  background: var(--lightBlue);
-  color: var(--light01);
+    background: var(--lightBlue);
+    color: var(--light01);
 }
 
 .fa-seedling {
-  background: var(--green);
-  color: var(--light01);
+    background: var(--green);
+    color: var(--light01);
 }
 
-.fa-book-reader{
+.fa-book-reader {
     background: var(--purple);
     color: var(--light01);
 }
 
-.fa-pencil-ruler{
+.fa-pencil-ruler {
     background: var(--lightRed);
     color: var(--light01);
 }
 
-.fa-music{
+.fa-music {
     background: var(--darkBlue);
     color: var(--light01);
-}
+}*/
 
 
 
