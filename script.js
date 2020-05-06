@@ -1,48 +1,72 @@
-let quotes = [
-    "today i am going to exercise",
-    "today i am going to read",
-    "today i am going to write",
-    "today i am going to code",
-    "today i am going to study",
-    "today i am going to work on my resume"
-]
+//JQUERY code for loading different views
+$(function () {
+    //loads the inital view
+    //looks for every tag with data-includes and loads the view
+    var includes = $('[data-include]');
 
+    jQuery.each(includes, function () {
 
+        var file = 'views/' + $(this).data('include') + '.html';
+        $(this).load(file);
 
-//REFRESH BUTTON
-document.getElementById("refresh").onclick = function () {
-    refresh()
-}; //listener
+    });
+});
 
-function refresh() {
-    //'randomly' pick one of the three possible goals
-    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 6)];
+function displayContent(page) {
+    //changes the source file
+    //should take a string that is the file name (will add .html to end)
+    var file = 'views/' + page + '.html';
+    $("#pageContainer").load(file);
+
+}
+//-----------------------------------------
+
+//ROUTES
+function list() {
+    displayContent("myList");
 }
 
-//NEW BUTTON
-document.getElementById("new").onclick = function () {
-    clear()
-}; //listener
+function addGoal(name) {
+    
+    console.log("got here");
+    
+    for (var i = 0; i <= 5; i++) {
+        var id = name + "_0" + i; 
+        var key = "goal_" + "01" + "_0" + i;
+        var value = document.getElementById(id).innerHTML;
+        
+        console.log(id + "," + value);
 
-function clear() {
-    //sets data of goal to nothing
-    document.getElementById("goal").innerHTML = "";
+        localStorage.setItem(key, value);
+    }
+    list();
 }
-
-//CHECK BUTTON
-document.getElementById("check").onclick = function () {
-    check()
-}; //listener
 
 function check() {
-    var goal = document.getElementById("goal");
-    var userIN = document.getElementById("goal").innerHTML;
-
-    console.log(userIN);
-
-    localStorage.setItem("userInput", userIN);
-
-    window.location.href = "mygoal.html"; 
-
-   
+    displayContent("goalexample");
 }
+
+function create() {
+    displayContent("create");
+}
+
+function draw() {
+    displayContent("draw");
+}
+
+function garden() {
+    displayContent("garden");
+}
+
+function landing() {
+    displayContent("landing");
+}
+
+function read() {
+    displayContent("read");
+}
+
+function writing() {
+    displayContent("writing");
+}
+//-----------------------------------------
