@@ -1,5 +1,7 @@
 //JQUERY code for loading different views
 $(function () {
+    //loads the inital view
+    //looks for every tag with data-includes and loads the view
     var includes = $('[data-include]');
 
     jQuery.each(includes, function () {
@@ -11,11 +13,19 @@ $(function () {
 });
 
 function displayContent(page) {
-    //changes the view
+    //changes the source file
+    //should take a string that is the file name (will add .html to end)
     var file = 'views/' + page + '.html';
     $("#pageContainer").load(file);
 
 }
+//-----------------------------------------
+
+//STORAGE
+localStorage.setItem("goal01","goal 01");
+localStorage.setItem("goal02","goal 02");
+localStorage.setItem("goal03","goal 03");
+
 //-----------------------------------------
 
 //ROUTES
@@ -26,31 +36,13 @@ function writing() {
     displayContent("writing");
 }
 function draw() {
-    displayContent("draw");
-    
+    displayContent("draw");  
+}
+
+function list(){
+    displayContent("myList");
 }
 //-----------------------------------------
 
 
-/*
 
-//REFRESH BUTTON
-document.getElementById("refresh").onclick = function () {
-    refresh()
-}; //listener
-
-function refresh() {
-    //'randomly' pick one of the three possible goals
-    document.getElementById("goal").innerHTML = quotes[Math.floor(Math.random() * 6)];
-}
-
-//NEW BUTTON
-document.getElementById("new").onclick = function () {
-    clear()
-}; //listener
-
-function clear() {
-    //sets data of goal to nothing
-    document.getElementById("goal").innerHTML = "";
-}
-*/
