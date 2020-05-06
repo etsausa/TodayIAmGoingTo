@@ -275,6 +275,10 @@ fieldset {
 ---------------------------------
 */
 
+.iconRow{
+    font-family: 'Lato', sans-serif;
+}
+
 #intro {
     margin: 0em;
     float: left;
@@ -370,12 +374,13 @@ fieldset {
 
 .fas {
   padding: 20px;
-  font-size: 55px;
+  font-size: 58px;
   width: 150px;
   height: 150px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
+  
 }
 
 .fa-pencil-alt {
