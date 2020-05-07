@@ -279,10 +279,6 @@ fieldset {
 /* LANDING PAGE
 ---------------------------------
 */
-
-.iconRow {
-}
-
 #intro {
     margin: 0em;
     float: left;
@@ -341,10 +337,35 @@ fieldset {
     position: relative;
     
     --border-size: 4px;
-    
 }
 
 /*//animations*/
+
+/*
+.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid;
+    border-color: initial;
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.borderPop:hover::before,
+.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}*/
+
 
 .col.icon.lightblue.borderPop::before{
     content: '';
@@ -463,10 +484,7 @@ fieldset {
     bottom: calc(var(--border-size) * -2);
 }
 
-
-
-
-    
+ 
 /*
 BUTTON STYLTES 
 ------------------------------------ 
