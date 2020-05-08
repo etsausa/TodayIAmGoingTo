@@ -26,6 +26,10 @@ function list() {
     displayContent("myList");
 }
 
+function back() {
+    displayContent("landing");
+}
+
 function addGoal(name) {
     
     console.log("got here");
