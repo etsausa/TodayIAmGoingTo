@@ -31,13 +31,24 @@
     --h3: calc(var(--baseFont)* 1.5);
     --h4: calc(var(--baseFont)* 1.2);
     --smallText: calc(var(--baseFont)* 0.5);
+    
+    --border-size: 4px;
 }
 
-/* COLOR IDs 
+/* COLOR Classes 
 ------------------------------------
 */
+.light-txt {
+    color: var(--light01);
+}
 .light {
     background-color: var(--light01);
+}
+.light02 {
+    background-color: var(--light02);
+}
+.light03 {
+    background-color: var(--light03);
 }
 
 .dark {
@@ -144,6 +155,9 @@ hr {
     border: 0.1em var(--light03) dashed;
     border-radius: 0.5em;
 
+}
+ul {
+    list-style: none;
 }
 
 /*    formatting classes ------------------------------------ */
@@ -330,13 +344,15 @@ fieldset {
     width: 3.5em;
     height: 3.5em;
     
+    margin: 0.1em;
+    
     border-radius: 50%;
     
     cursor: pointer;
     
     position: relative;
     
-    --border-size: 4px;
+    
 }
 
 /*//animations*/

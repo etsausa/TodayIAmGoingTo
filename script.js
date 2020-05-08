@@ -22,32 +22,72 @@ function displayContent(page) {
 //-----------------------------------------
 
 //ROUTES
+//function routes
+function back() {//landing
+    displayContent("landing");
+}
+
+function clearList() {
+    localStorage.clear();
+    console.log("cleared list?");
+    
+    list();
+    
+    localStorage.setItem("01", "off");
+    localStorage.setItem("02", "off");
+    localStorage.setItem("03", "off");
+}
+
+window.onload = (event) => {
+
+    localStorage.setItem("01", "off");
+    localStorage.setItem("02", "off");
+    localStorage.setItem("03", "off");
+    
+};
+ 
+function addGoal(name) {
+    
+    var one = "01";
+    var two = "02";
+    var three = "03";
+    var selector;
+    
+    if ( localStorage.getItem("01") == "off" ) {
+        console.log("goal 01 selected");
+        selector = one;
+        localStorage.setItem("01", "on");
+    } else if ( localStorage.getItem("02") == "off" ) {
+        console.log("goal 02 selected");
+        selector = two;
+        localStorage.setItem("02", "on");
+    } else {
+        console.log("goal 03 selected");
+        selector = three;
+        localStorage.setItem("03", "on");
+    }
+        
+    //generates id and value to display content of goal 
+    var size = 5; //number of steps
+    for (var i = 0; i <= size; i++) {
+        
+        var id = name + "_0" + i; 
+        var key = "goal_" + selector + "_0" + i;
+        var value = document.getElementById(id).innerHTML;
+        
+        console.log("Added data to local Storage:   " + id + "," + value);//logs data added
+
+        localStorage.setItem(key, value);
+    }
+    list();//redirects 
+}
+//page routes
 function list() {
     displayContent("myList");
 }
 
-function back() {
-    displayContent("landing");
-}
-
-function addGoal(name) {
-    
-    console.log("got here");
-    
-    for (var i = 0; i <= 5; i++) {
-        var id = name + "_0" + i; 
-        var key = "goal_" + "01" + "_0" + i;
-        var value = document.getElementById(id).innerHTML;
-        
-        console.log(id + "," + value);
-
-        localStorage.setItem(key, value);
-    }
-    list();
-}
-
-function check() {
-    displayContent("goalexample");
+function build() {
+    displayContent("build");
 }
 
 function create() {
@@ -56,6 +96,9 @@ function create() {
 
 function draw() {
     displayContent("draw");
+}
+function exercise() {
+    displayContent("exercise");
 }
 
 function garden() {
