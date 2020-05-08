@@ -66,7 +66,7 @@ function read() {
     displayContent("read");
 }
 
-function writing() {
-    displayContent("writing");
+function write() {
+    displayContent("write");
 }
 //-----------------------------------------
