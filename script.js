@@ -53,6 +53,7 @@ function addGoal(name) {
     var three = "03";
     var selector;
     
+    //figures out which goal is open
     if ( localStorage.getItem("01") == "off" ) {
         console.log("goal 01 selected");
         selector = one;

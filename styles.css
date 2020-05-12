@@ -22,9 +22,9 @@
     --darkBlue: #0097A7;
     --green: #06D6A0;
     --red: #d60606;
-    --purple: #a47ac3;
     --lightRed: #F26D6E;
-
+    --purple: #a47ac3;
+    
     --baseFont: 1em;
     --h1: calc(var(--baseFont)* 6);
     --h2: calc(var(--baseFont)* 3);
@@ -77,6 +77,10 @@
 
 .red {
     background-color: var(--red);
+}
+
+.lightRed {
+    background-color: var(--lightRed);
 }
 
 .purple {
@@ -363,6 +367,7 @@ fieldset {
     
 }
 
+
 /*//animations*/
 
 /*
@@ -485,7 +490,7 @@ fieldset {
     bottom: calc(var(--border-size) * -2);
 }
 
-.col.icon.red.borderPop::before{
+.col.icon.lightRed.borderPop::before{
     content: '';
     
     position: absolute;
@@ -495,13 +500,13 @@ fieldset {
     bottom: 0;
     border-radius: 50%;
     
-    border: var(--border-size) solid var(--red);
+    border: var(--border-size) solid var(--lightRed);
     
     transition: top, left, right, bottom, 100ms ease-in-out;
 }
 
-.col.icon.red.borderPop:hover::before,
-.col.icon.red.borderPop:focus::before {
+.col.icon.lightRed.borderPop:hover::before,
+.col.icon.lightRed.borderPop:focus::before {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
@@ -547,7 +552,6 @@ input[type=submit] {
 */
 button:hover,
 input[type=submit]:hover {
-    background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
     opacity: 1;
 
