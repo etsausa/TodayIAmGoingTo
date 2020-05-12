@@ -593,3 +593,13 @@ button:focus {
     outline: 0 !important;
 }
 /* ------------------------------------ */
+
+/*
+Animations
+------------------------------------ 
+*/
+
+.checked{
+    animation-name: goalComplete;
+    
+}
