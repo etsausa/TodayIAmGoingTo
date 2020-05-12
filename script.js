@@ -10,6 +10,8 @@ $(function () {
         $(this).load(file);
 
     });
+    
+    
 });
 
 function displayContent(page) {
@@ -45,6 +47,9 @@ window.onload = (event) => {
     localStorage.setItem("03", "off");
     
 };
+
+
+
  
 function addGoal(name) {
     
@@ -82,6 +87,19 @@ function addGoal(name) {
     }
     list();//redirects 
 }
+
+function clearGoal() {
+//    var checkBtn = document.getElementsByClassName('checkBtn');
+//    var currentBtn = checkBtn.this;
+//    var which = currentBtn.attr("data-which");
+    localStorage.clear("01");
+    list();
+    
+    localStorage.setItem("01", "off");
+    console.log("CLEAR");
+    
+}
+
 //page routes
 function list() {
     displayContent("myList");
