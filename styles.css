@@ -198,6 +198,14 @@ ul {
     justify-content: center;
 }
 
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
 /* FORMS STYLING
 ---------------------------------
 */
