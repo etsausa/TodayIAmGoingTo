@@ -1,5 +1,7 @@
 <script>
     document.getElementById("goal01").innerHTML = localStorage.getItem("goal_01_00");
+    document.getElementById("btn01").innerHTML = localStorage.getItem("goal_01_06");
+    document.getElementById("btn02").innerHTML = localStorage.getItem("goal_01_07");
 
     document.getElementById("step01").innerHTML = localStorage.getItem("goal_01_01");
     document.getElementById("step02").innerHTML = localStorage.getItem("goal_01_02");
@@ -36,8 +38,8 @@
     <div class="topRow">
         <h3 id="goal01" class="alignLeft"></h3>
         <div class="alignRight">
-            <button class="red"><i class="far fa-trash-alt"></i></button>
-            <button class="green"><i class="fas fa-check"></i></button>
+            <button class="red" ><i id="btn01" class="far fa-trash-alt"></i></button>
+            <button class="green"><i  id="btn02" class="fas fa-check"></i></button>
         </div>
     </div>
 
