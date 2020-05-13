@@ -1,7 +1,5 @@
 <script>
     document.getElementById("goal01").innerHTML = localStorage.getItem("goal_01_00");
-    document.getElementById("btn01").innerHTML = localStorage.getItem("goal_01_06");
-    document.getElementById("btn02").innerHTML = localStorage.getItem("goal_01_07");
 
     document.getElementById("step01").innerHTML = localStorage.getItem("goal_01_01");
     document.getElementById("step02").innerHTML = localStorage.getItem("goal_01_02");
@@ -30,17 +28,22 @@
 </script>
 
 <h2>My Goals</h2>
-<div id="warning" class="red">
 
+<div id="warning" class="red">
 </div>
+
 <!-- GOAL01 -->
-<div class="content light">
+<div id="01" class="content light">
+   
     <div class="topRow">
        
         <h3 id="goal01" class="alignLeft"></h3>
+        
         <div class="alignRight">
-            <button class="red trash" ><i id="btn01" class="far fa-trash-alt"></i></button>
-            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>
+           
+            <button onclick="clearGoal('01')" class="red trash" ><i class="far fa-trash-alt"></i></button>
+            
+<!--            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>-->
         </div>
     </div>
 
@@ -54,11 +57,11 @@
 
 </div>
 <!-- GOAL02 -->
-<div class="content light">
+<div id="02" class="content light">
     <h3 id="goal02" class="alignLeft"></h3>
     <div class="alignRight">
-            <button class="red trash" ><i id="btn01" class="far fa-trash-alt"></i></button>
-            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>
+            <button onclick="clearGoal('02')" class="red trash" ><i class="far fa-trash-alt"></i></button>
+<!--            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>-->
         </div>
     <ul>
         <li><span id="step06"></span></li>
@@ -70,11 +73,11 @@
 
 </div>
 <!-- GOAL03 -->
-<div class="content light">
+<div id="03" class="content light">
     <h3 id="goal03" class="alignLeft"></h3>
     <div class="alignRight">
-            <button class="red trash" ><i id="btn01" class="far fa-trash-alt"></i></button>
-            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>
+            <button onclick="clearGoal('03')" class="red trash" ><i id="btn01" class="far fa-trash-alt"></i></button>
+<!--            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>-->
         </div>
     <ul>
         <li><span id="step11"></span></li>

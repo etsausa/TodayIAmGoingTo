@@ -46,9 +46,9 @@ window.onload = (event) => {
     localStorage.setItem("02", "off");
     localStorage.setItem("03", "off");
     
+    document.getElementById("")
+    
 };
-
-
 
  
 function addGoal(name) {
@@ -88,15 +88,22 @@ function addGoal(name) {
     list();//redirects 
 }
 
-function clearGoal() {
-//    var checkBtn = document.getElementsByClassName('checkBtn');
-//    var currentBtn = checkBtn.this;
-//    var which = currentBtn.attr("data-which");
-    localStorage.clear("01");
+function clearGoal(id) {
+   
+    var size = 5; //number of steps
+    for (var i = 0; i <= size; i++) {
+        var key = "goal_" + id + "_0" + i;
+        
+        console.log("Removed data from local Storage:   " + id);//logs data added
+
+        localStorage.removeItem(key);
+    }
+    
+    localStorage.setItem(id, "off");
+    
     list();
     
-    localStorage.setItem("01", "off");
-    console.log("CLEAR");
+    
     
 }
 
