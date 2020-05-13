@@ -423,13 +423,7 @@ fieldset {
    
 }
 
-<<<<<<< HEAD
-.col.icon.green.borderPop::before{
-=======
-
-
 .icon.green.borderPop::before{
->>>>>>> cd2ab23be93469f5a337122ffbb47ee42012d70a
     content: '';
     
     position: absolute;
@@ -521,16 +515,6 @@ fieldset {
     bottom: calc(var(--border-size) * -2);
 }
 
-<<<<<<< HEAD
-/*
-myList
-----------------------------------
-*/
-
-#01 {
-    display: none;
-}
-=======
 .icon.red.borderPop::before{
     content: '';
     
@@ -555,7 +539,6 @@ myList
 }
 
 
->>>>>>> cd2ab23be93469f5a337122ffbb47ee42012d70a
  
 /*
 BUTTON STYLES 
