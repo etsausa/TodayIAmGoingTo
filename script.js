@@ -46,7 +46,6 @@ window.onload = (event) => {
     localStorage.setItem("02", "off");
     localStorage.setItem("03", "off");
     
-    document.getElementById("")
     
 };
 
@@ -139,7 +138,7 @@ function read() {
     displayContent("read");
 }
 
-function write() {
-    displayContent("write");
+function writing() {
+    displayContent("writing");
 }
 //-----------------------------------------
