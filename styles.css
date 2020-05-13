@@ -172,6 +172,7 @@ ul {
     padding: 2em;
     border-radius: 0.5em;
     overflow: auto;
+    
 }
 
 .section {
@@ -397,7 +398,7 @@ fieldset {
 
 
 
-.col.icon.lightblue.borderPop::before{
+.icon.lightblue.borderPop::before{
     content: '';
     
     position: absolute;
@@ -413,8 +414,8 @@ fieldset {
      
 }
 
-.col.icon.lightblue.borderPop:hover::before,
-.col.icon.lightblue.borderPop:focus::before {
+.icon.lightblue.borderPop:hover::before,
+.icon.lightblue.borderPop:focus::before {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
@@ -424,7 +425,7 @@ fieldset {
 
 
 
-.col.icon.green.borderPop::before{
+.icon.green.borderPop::before{
     content: '';
     
     position: absolute;
@@ -439,15 +440,15 @@ fieldset {
     transition: top, left, right, bottom, 100ms ease-in-out;
 }
 
-.col.icon.green.borderPop:hover::before,
-.col.icon.green.borderPop:focus::before {
+.icon.green.borderPop:hover::before,
+.icon.green.borderPop:focus::before {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2);
 }
 
-.col.icon.purple.borderPop::before{
+.icon.purple.borderPop::before{
     content: '';
     
     position: absolute;
@@ -462,15 +463,15 @@ fieldset {
     transition: top, left, right, bottom, 100ms ease-in-out;
 }
 
-.col.icon.purple.borderPop:hover::before,
-.col.icon.purple.borderPop:focus::before {
+.icon.purple.borderPop:hover::before,
+.icon.purple.borderPop:focus::before {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2);
 }
 
-.col.icon.darkBlue.borderPop::before{
+.icon.darkBlue.borderPop::before{
     content: '';
     
     position: absolute;
@@ -485,15 +486,15 @@ fieldset {
     transition: top, left, right, bottom, 100ms ease-in-out;
 }
 
-.col.icon.darkBlue.borderPop:hover::before,
-.col.icon.darkBlue.borderPop:focus::before {
+.icon.darkBlue.borderPop:hover::before,
+.icon.darkBlue.borderPop:focus::before {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2);
 }
 
-.col.icon.lightRed.borderPop::before{
+.icon.lightRed.borderPop::before{
     content: '';
     
     position: absolute;
@@ -508,13 +509,37 @@ fieldset {
     transition: top, left, right, bottom, 100ms ease-in-out;
 }
 
-.col.icon.lightRed.borderPop:hover::before,
-.col.icon.lightRed.borderPop:focus::before {
+.icon.lightRed.borderPop:hover::before,
+.icon.lightRed.borderPop:focus::before {
     top: calc(var(--border-size) * -2);
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2);
 }
+
+.icon.red.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--red);
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.icon.red.borderPop:hover::before,
+.icon.red.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
 
  
 /*
