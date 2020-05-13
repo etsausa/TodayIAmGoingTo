@@ -396,6 +396,7 @@ fieldset {
 }*/
 
 
+
 .col.icon.lightblue.borderPop::before{
     content: '';
     
@@ -408,7 +409,8 @@ fieldset {
     
     border: var(--border-size) solid var(--lightBlue);
     
-    transition: top, left, right, bottom, 100ms ease-in-out;
+    transition: top, left, right, bottom, 120ms ease-in-out;
+     
 }
 
 .col.icon.lightblue.borderPop:hover::before,
@@ -417,6 +419,7 @@ fieldset {
     left: calc(var(--border-size) * -2);
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2);
+   
 }
 
 
@@ -564,7 +567,8 @@ input[type=submit]:hover {
      changes color
 */
 button:active {
-    background-color: rgba(50, 50, 0, 0.5);
+/*    background-color: rgba(50, 50, 0, 0.5);*/
+    opacity: .8;
     transform: translateY(0.05em);
     box-shadow: inset 0 -0.45em 0 -0.35em rgba(0, 0, 0, 0.30),
         inset 0 0.15em 0 0 rgba(256, 256, 256, 0.7);
