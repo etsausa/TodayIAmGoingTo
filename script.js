@@ -11,7 +11,6 @@ $(function () {
 
     });
     
-    
 });
 
 function displayContent(page) {
@@ -45,7 +44,6 @@ window.onload = (event) => {
     localStorage.setItem("01", "off");
     localStorage.setItem("02", "off");
     localStorage.setItem("03", "off");
-    
     
 };
 
@@ -101,8 +99,6 @@ function clearGoal(id) {
     localStorage.setItem(id, "off");
     
     list();
-    
-    
     
 }
 

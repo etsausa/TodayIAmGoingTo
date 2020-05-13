@@ -422,8 +422,6 @@ fieldset {
    
 }
 
-
-
 .col.icon.green.borderPop::before{
     content: '';
     
@@ -516,9 +514,17 @@ fieldset {
     bottom: calc(var(--border-size) * -2);
 }
 
+/*
+myList
+----------------------------------
+*/
+
+#01 {
+    display: none;
+}
  
 /*
-BUTTON STYLTES 
+BUTTON STYLES 
 ------------------------------------ 
 */
 button,
