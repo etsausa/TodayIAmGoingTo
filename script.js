@@ -39,13 +39,20 @@ function clearList() {
     localStorage.setItem("03", "off");
 }
 
-window.onload = (event) => {
-
-    localStorage.setItem("01", "off");
-    localStorage.setItem("02", "off");
-    localStorage.setItem("03", "off");
+function clearGoal(id) {
+   
+    var size = 5; //number of steps
+    for (var i = 0; i <= size; i++) {
+        var key = "goal_" + id + "_0" + i;
+        
+        console.log("Removed data from local Storage:   " + id);//logs data removed
+        localStorage.removeItem(key);
+    }
+    localStorage.setItem(id, "off");
+    list();
     
-};
+}
+
 
  
 function addGoal(name) {
@@ -60,47 +67,43 @@ function addGoal(name) {
         console.log("goal 01 selected");
         selector = one;
         localStorage.setItem("01", "on");
+
     } else if ( localStorage.getItem("02") == "off" ) {
         console.log("goal 02 selected");
         selector = two;
         localStorage.setItem("02", "on");
+
     } else {
         console.log("goal 03 selected");
         selector = three;
         localStorage.setItem("03", "on");
+        
     }
         
     //generates id and value to display content of goal 
     var size = 5; //number of steps
     for (var i = 0; i <= size; i++) {
         
+        
+        
         var id = name + "_0" + i; 
         var key = "goal_" + selector + "_0" + i;
-        var value = document.getElementById(id).innerHTML;
-        
-        console.log("Added data to local Storage:   " + id + "," + value);//logs data added
+        if (document.getElementById(id)) {
+            var value = document.getElementById(id).innerHTML;
 
-        localStorage.setItem(key, value);
+            localStorage.setItem(key, value);
+            
+            console.log("Added data to local Storage:   " + id + "," + value);//logs data added
+
+        }
+        
+        
+        
     }
     list();//redirects 
 }
 
-function clearGoal(id) {
-   
-    var size = 5; //number of steps
-    for (var i = 0; i <= size; i++) {
-        var key = "goal_" + id + "_0" + i;
-        
-        console.log("Removed data from local Storage:   " + id);//logs data added
 
-        localStorage.removeItem(key);
-    }
-    
-    localStorage.setItem(id, "off");
-    
-    list();
-    
-}
 
 //page routes
 function list() {

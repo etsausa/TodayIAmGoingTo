@@ -24,16 +24,43 @@
     document.getElementById("step13").innerHTML = localStorage.getItem("goal_03_03");
     document.getElementById("step14").innerHTML = localStorage.getItem("goal_03_04");
     document.getElementById("step15").innerHTML = localStorage.getItem("goal_03_05");
-
+    
+    if(localStorage.getItem("01") == "on" || localStorage.getItem("02") == "on" || localStorage.getItem("03") == "on" ) {
+        document.getElementById("warning").style.display = "none";
+    } else {
+        document.getElementById("warning").style.display = "block";
+    }
+    
+    if (localStorage.getItem("01") == "on"){
+        document.getElementById("01").style.display = "block";
+    } else if (localStorage.getItem("01") == "off"){
+        document.getElementById("01").style.display = "none";
+    }
+    
+    if (localStorage.getItem("02") == "on"){
+        document.getElementById("02").style.display = "block";
+    } else if (localStorage.getItem("01") == "off"){
+        document.getElementById("02").style.display = "none";
+    }
+    
+    if (localStorage.getItem("03") == "on"){
+        document.getElementById("03").style.display = "block";
+    } else if (localStorage.getItem("03") == "off"){
+        document.getElementById("03").style.display = "none";
+    }
+    
+    console.log( localStorage.getItem("01") );
+    
 </script>
 
 <h2>My Goals</h2>
 
-<div id="warning" class="red">
+<div id="warning" style="color: var(--red);">
+You have no goals save! 
 </div>
 
 <!-- GOAL01 -->
-<div id="01" class="content light">
+<div id="01" class="content light" style="display: none;">
    
     <div class="topRow">
        
@@ -57,7 +84,7 @@
 
 </div>
 <!-- GOAL02 -->
-<div id="02" class="content light">
+<div id="02" class="content light" style="display: none;">
     <h3 id="goal02" class="alignLeft"></h3>
     <div class="alignRight">
             <button onclick="clearGoal('02')" class="red trash" ><i class="far fa-trash-alt"></i></button>
@@ -73,7 +100,7 @@
 
 </div>
 <!-- GOAL03 -->
-<div id="03" class="content light">
+<div id="03" class="content light" style="display: none;">
     <h3 id="goal03" class="alignLeft"></h3>
     <div class="alignRight">
             <button onclick="clearGoal('03')" class="red trash" ><i id="btn01" class="far fa-trash-alt"></i></button>
