@@ -7,11 +7,73 @@
     document.getElementById("step04").innerHTML = localStorage.getItem("goal_01_04");
     document.getElementById("step05").innerHTML = localStorage.getItem("goal_01_05");
 
+
+    document.getElementById("goal02").innerHTML = localStorage.getItem("goal_02_00");
+
+    document.getElementById("step06").innerHTML = localStorage.getItem("goal_02_01");
+    document.getElementById("step07").innerHTML = localStorage.getItem("goal_02_02");
+    document.getElementById("step08").innerHTML = localStorage.getItem("goal_02_03");
+    document.getElementById("step09").innerHTML = localStorage.getItem("goal_02_04");
+    document.getElementById("step10").innerHTML = localStorage.getItem("goal_02_05");
+
+
+    document.getElementById("goal03").innerHTML = localStorage.getItem("goal_03_00");
+
+    document.getElementById("step11").innerHTML = localStorage.getItem("goal_03_01");
+    document.getElementById("step12").innerHTML = localStorage.getItem("goal_03_02");
+    document.getElementById("step13").innerHTML = localStorage.getItem("goal_03_03");
+    document.getElementById("step14").innerHTML = localStorage.getItem("goal_03_04");
+    document.getElementById("step15").innerHTML = localStorage.getItem("goal_03_05");
+    
+    if(localStorage.getItem("01") == "on" || localStorage.getItem("02") == "on" || localStorage.getItem("03") == "on" ) {
+        document.getElementById("warning").style.display = "none";
+    } else {
+        document.getElementById("warning").style.display = "block";
+    }
+    
+    if (localStorage.getItem("01") == "on"){
+        document.getElementById("01").style.display = "block";
+    } else if (localStorage.getItem("01") == "off"){
+        document.getElementById("01").style.display = "none";
+    }
+    
+    if (localStorage.getItem("02") == "on"){
+        document.getElementById("02").style.display = "block";
+    } else if (localStorage.getItem("01") == "off"){
+        document.getElementById("02").style.display = "none";
+    }
+    
+    if (localStorage.getItem("03") == "on"){
+        document.getElementById("03").style.display = "block";
+    } else if (localStorage.getItem("03") == "off"){
+        document.getElementById("03").style.display = "none";
+    }
+    
+    console.log( localStorage.getItem("01") );
+    
 </script>
 
 <h2>My Goals</h2>
-<div class="section">
-    <h3 id="goal01"></h3>
+
+<div id="warning" style="color: var(--red);">
+You have no goals save! 
+</div>
+
+<!-- GOAL01 -->
+<div id="01" class="content light" style="display: none;">
+   
+    <div class="topRow">
+       
+        <h3 id="goal01" class="alignLeft"></h3>
+        
+        <div class="alignRight">
+           
+            <button onclick="clearGoal('01')" class="red trash" ><i class="far fa-trash-alt"></i></button>
+            
+<!--            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>-->
+        </div>
+    </div>
+
     <ul>
         <li><span id="step01"></span></li>
         <li><span id="step02"></span></li>
@@ -19,4 +81,42 @@
         <li><span id="step04"></span></li>
         <li><span id="step05"></span></li>
     </ul>
+
+</div>
+<!-- GOAL02 -->
+<div id="02" class="content light" style="display: none;">
+    <h3 id="goal02" class="alignLeft"></h3>
+    <div class="alignRight">
+            <button onclick="clearGoal('02')" class="red trash" ><i class="far fa-trash-alt"></i></button>
+<!--            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>-->
+        </div>
+    <ul>
+        <li><span id="step06"></span></li>
+        <li><span id="step07"></span></li>
+        <li><span id="step08"></span></li>
+        <li><span id="step09"></span></li>
+        <li><span id="step10"></span></li>
+    </ul>
+
+</div>
+<!-- GOAL03 -->
+<div id="03" class="content light" style="display: none;">
+    <h3 id="goal03" class="alignLeft"></h3>
+    <div class="alignRight">
+            <button onclick="clearGoal('03')" class="red trash" ><i id="btn01" class="far fa-trash-alt"></i></button>
+<!--            <button onclick="clearGoal()" class="green checkBtn" data-which="01" ><i id="btn02" class="fas fa-check"></i></button>-->
+        </div>
+    <ul>
+        <li><span id="step11"></span></li>
+        <li><span id="step12"></span></li>
+        <li><span id="step13"></span></li>
+        <li><span id="step14"></span></li>
+        <li><span id="step15"></span></li>
+    </ul>
+
+</div>
+<div class="row">
+    <button onclick="back()" class="red"> &lt; &lt; </button>
+    <button onclick="clearList()" class="red">clear list</button>
+
 </div>

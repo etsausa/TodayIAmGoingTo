@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --dark01: #000000;
     --dark02: #333333;
@@ -18,22 +22,33 @@
     --darkBlue: #0097A7;
     --green: #06D6A0;
     --red: #d60606;
-    --purple: #a47ac3;
     --lightRed: #F26D6E;
-
+    --purple: #a47ac3;
+    
     --baseFont: 1em;
     --h1: calc(var(--baseFont)* 6);
     --h2: calc(var(--baseFont)* 3);
     --h3: calc(var(--baseFont)* 1.5);
     --h4: calc(var(--baseFont)* 1.2);
     --smallText: calc(var(--baseFont)* 0.5);
+    
+    --border-size: 4px;
 }
 
-/* COLOR IDs 
+/* COLOR Classes 
 ------------------------------------
 */
+.light-txt {
+    color: var(--light01);
+}
 .light {
     background-color: var(--light01);
+}
+.light02 {
+    background-color: var(--light02);
+}
+.light03 {
+    background-color: var(--light03);
 }
 
 .dark {
@@ -62,6 +77,10 @@
 
 .red {
     background-color: var(--red);
+}
+
+.lightRed {
+    background-color: var(--lightRed);
 }
 
 .purple {
@@ -141,6 +160,9 @@ hr {
     border-radius: 0.5em;
 
 }
+ul {
+    list-style: none;
+}
 
 /*    formatting classes ------------------------------------ */
 
@@ -150,6 +172,7 @@ hr {
     padding: 2em;
     border-radius: 0.5em;
     overflow: auto;
+    
 }
 
 .section {
@@ -179,6 +202,15 @@ hr {
     align-items: center;
     justify-content: center;
 }
+
+.alignLeft {
+    float: left;
+}
+
+.alignRight {
+    float: right;
+}
+
 
 /* FORMS STYLING
 ---------------------------------
@@ -272,13 +304,10 @@ fieldset {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+
 /* LANDING PAGE
 ---------------------------------
 */
-
-.iconRow {
-}
-
 #intro {
     margin: 0em;
     float: left;
@@ -294,7 +323,7 @@ fieldset {
 
     font-family: 'Playfair Display', serif;
     font-size: 4vw;
-    font-weight: 500;
+    font-weight: 900;
 
     color: var(--red);
     background-color: rgba(0, 0, 0, 0);
@@ -330,12 +359,191 @@ fieldset {
     width: 3.5em;
     height: 3.5em;
     
+    margin: 0.1em;
+    
     border-radius: 50%;
     
-}
+    cursor: pointer;
     
+    position: relative;
+    
+    
+}
+
+
+/*//animations*/
+
 /*
-BUTTON STYLTES 
+.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid;
+    border-color: initial;
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.borderPop:hover::before,
+.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}*/
+
+
+
+.icon.lightblue.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--lightBlue);
+    
+    transition: top, left, right, bottom, 120ms ease-in-out;
+     
+}
+
+.icon.lightblue.borderPop:hover::before,
+.icon.lightblue.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+   
+}
+
+.icon.green.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--green);
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.icon.green.borderPop:hover::before,
+.icon.green.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+.icon.purple.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--purple);
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.icon.purple.borderPop:hover::before,
+.icon.purple.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+.icon.darkBlue.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--darkBlue);
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.icon.darkBlue.borderPop:hover::before,
+.icon.darkBlue.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+.icon.lightRed.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--lightRed);
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.icon.lightRed.borderPop:hover::before,
+.icon.lightRed.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+.icon.red.borderPop::before{
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    
+    border: var(--border-size) solid var(--red);
+    
+    transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.icon.red.borderPop:hover::before,
+.icon.red.borderPop:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
+
+
+ 
+/*
+BUTTON STYLES 
 ------------------------------------ 
 */
 button,
@@ -372,7 +580,6 @@ input[type=submit] {
 */
 button:hover,
 input[type=submit]:hover {
-    background-color: rgba(0, 0, 0, 0.4);
     cursor: pointer;
     opacity: 1;
 
@@ -385,7 +592,8 @@ input[type=submit]:hover {
      changes color
 */
 button:active {
-    background-color: rgba(50, 50, 0, 0.5);
+/*    background-color: rgba(50, 50, 0, 0.5);*/
+    opacity: .8;
     transform: translateY(0.05em);
     box-shadow: inset 0 -0.45em 0 -0.35em rgba(0, 0, 0, 0.30),
         inset 0 0.15em 0 0 rgba(256, 256, 256, 0.7);
@@ -418,3 +626,13 @@ button:focus {
     outline: 0 !important;
 }
 /* ------------------------------------ */
+
+/*
+Animations
+------------------------------------ 
+*/
+
+.checked{
+    animation-name: goalComplete;
+    
+}
